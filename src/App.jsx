@@ -18,7 +18,6 @@ function App() {
     { title: "ben", content: "asfd" },
     { title: "243", content: "dajflkamfd" },
   ]);
-
   return (
     <div>
       <Header />
@@ -42,6 +41,14 @@ function App() {
           name={index}
           title={note.title}
           content={note.content}
+          // onclick={deletee}
+          onClick={(indexx) => {
+            setNotes(
+              notes.filter((note, index) => {
+                return index != indexx;
+              })
+            );
+          }}
         />
       ))}
 
